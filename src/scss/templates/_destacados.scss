@@ -1,0 +1,56 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.items{
+    @include m.tablet {
+        margin-top: 2rem;
+        
+    }
+    @include m.tablet {
+        @include m.grid(2,3rem);
+        
+    }
+}
+.destacados-titulo{
+    color: v.$negro;
+}
+.destacados{
+    background-image: url("/public/build/img/Documento\ A4\ Cuaderno\ Azul\ Liso\ \(1\).webp");
+    background-size: 35rem;
+    @include m.tablet {
+        height: 55rem;
+    }
+    height: 20rem;
+    width: 100%;
+    @include m.tablet {
+        background-size: 50rem;
+        
+    }
+    background-repeat: repeat-y;
+    background-position: center top;
+    margin-bottom: 3rem;
+}
+.productos{
+    @include m.grid(2,3rem);
+}
+.producto{
+    padding: 1rem;
+    border:1px solid grey;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .producto-titulo{
+        color: v.$verde;
+        font-weight: bold;
+        font-size: 1.5rem;
+        @include m.tablet {
+            font-size: 3rem;
+            
+        }
+    }
+    .producto-precio{
+        color: v.$negro;
+        font-weight: bold;
+        margin-top: 1rem;
+    }
+}
